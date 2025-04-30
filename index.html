@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cleenit - Professional Cleaning Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#1E40AF',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="flex items-center">
+                        <img src="images/logo-main.png" alt="Cleenit Logo" class="h-8 w-auto">
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#services" class="text-gray-700 hover:text-primary">Services</a>
+                    <a href="#pricing" class="text-gray-700 hover:text-primary">Pricing</a>
+                    <a href="#about" class="text-gray-700 hover:text-primary">About</a>
+                    <a href="#contact" class="text-gray-700 hover:text-primary">Contact</a>
+                    <a href="#book" class="bg-primary text-white px-4 py-2 rounded-md hover:bg-secondary">Book Now</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-700">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen bg-gray-50">
+        <div class="absolute inset-0">
+            <img src="images/background.jpg" 
+                 alt="Cleaning Service Background" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/80 to-black/70 lg:from-black/80 lg:to-black/40"></div>
+        </div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-screen">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-screen pt-24 pb-16 lg:py-20">
+                <div class="text-white space-y-6 lg:space-y-8 text-center lg:text-left flex flex-col justify-center min-h-[60vh] lg:min-h-0">
+                    <div class="animate-fade-in-up">
+                        <span class="text-primary font-semibold text-base lg:text-lg inline-block px-4 py-2 bg-white/10 rounded-full backdrop-blur-sm">Professional Cleaning Services</span>
+                        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mt-4 leading-tight">
+                            We provide the best
+                            <span class="block mt-2 text-primary">care for your home</span>
+                        </h1>
+                    </div>
+                    <p class="text-lg sm:text-xl text-gray-300 animate-fade-in-up animation-delay-200 max-w-xl mx-auto lg:mx-0">
+                        Experience the difference with our expert cleaning team. 
+                        We deliver spotless results and exceptional service, every time.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in-up animation-delay-400">
+                        <a href="#book" class="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium text-white bg-primary rounded-lg hover:bg-secondary transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                            Get Started
+                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </a>
+                        <a href="#services" class="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium text-white border-2 border-white/70 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 backdrop-blur-sm">
+                            Our Services
+                        </a>
+                    </div>
+                    <div class="grid grid-cols-3 gap-4 sm:gap-8 pt-8 lg:pt-12 animate-fade-in-up animation-delay-600 max-w-2xl mx-auto lg:mx-0">
+                        <div class="text-center px-2 py-3 sm:p-4 bg-white/5 rounded-lg backdrop-blur-sm">
+                            <h3 class="text-2xl sm:text-4xl font-bold text-primary">500+</h3>
+                            <p class="text-sm sm:text-base text-gray-300 mt-1 sm:mt-2">Happy Clients</p>
+                        </div>
+                        <div class="text-center px-2 py-3 sm:p-4 bg-white/5 rounded-lg backdrop-blur-sm">
+                            <h3 class="text-2xl sm:text-4xl font-bold text-primary">1000+</h3>
+                            <p class="text-sm sm:text-base text-gray-300 mt-1 sm:mt-2">Homes Cleaned</p>
+                        </div>
+                        <div class="text-center px-2 py-3 sm:p-4 bg-white/5 rounded-lg backdrop-blur-sm">
+                            <h3 class="text-2xl sm:text-4xl font-bold text-primary">100%</h3>
+                            <p class="text-sm sm:text-base text-gray-300 mt-1 sm:mt-2">Satisfaction</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desktop Hero Image (Only visible on desktop) -->
+                <div class="hidden lg:block">
+                    <div class="relative">
+                        <div class="absolute -top-16 -left-16 w-32 h-32 bg-primary rounded-full opacity-20 animate-pulse"></div>
+                        <div class="absolute -bottom-16 -right-16 w-32 h-32 bg-primary rounded-full opacity-20 animate-pulse animation-delay-500"></div>
+                        <div class="relative z-10 bg-white/10 backdrop-blur-sm rounded-2xl p-4">
+                            <img src="images/service-1.jpg" alt="Featured Cleaning Service" class="w-full h-[600px] object-cover rounded-xl shadow-2xl">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0">
+            <svg class="fill-current text-white w-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200">
+                <path d="M0,128L80,138.7C160,149,320,171,480,165.3C640,160,800,128,960,117.3C1120,107,1280,117,1360,122.7L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Discover our home cleaning services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center p-6 service-card bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="w-full h-48 mb-6 overflow-hidden rounded-lg">
+                        <img src="images/service-1.jpg" alt="Bedroom Cleaning" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-16 h-16 mx-auto mb-4">
+                        <img src="images/bedroom.svg" alt="Bedroom Cleaning Icon" class="w-full h-full">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Bedroom Cleaning</h3>
+                    <p class="text-gray-600">Thorough cleaning of all bedroom spaces</p>
+                </div>
+                <div class="text-center p-6 service-card bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="w-full h-48 mb-6 overflow-hidden rounded-lg">
+                        <img src="images/service-2.jpg" alt="Bathroom Cleaning" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-16 h-16 mx-auto mb-4">
+                        <img src="images/bathroom.svg" alt="Bathroom Cleaning Icon" class="w-full h-full">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Bathroom Cleaning</h3>
+                    <p class="text-gray-600">Deep cleaning for bathrooms and toilets</p>
+                </div>
+                <div class="text-center p-6 service-card bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="w-full h-48 mb-6 overflow-hidden rounded-lg">
+                        <img src="images/service-3.jpg" alt="Kitchen Cleaning" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-16 h-16 mx-auto mb-4">
+                        <img src="images/kitchen.svg" alt="Kitchen Cleaning Icon" class="w-full h-full">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Kitchen Cleaning</h3>
+                    <p class="text-gray-600">Professional kitchen and appliance cleaning</p>
+                </div>
+                <div class="text-center p-6 service-card bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="w-full h-48 mb-6 overflow-hidden rounded-lg">
+                        <img src="images/image-2.jpg" alt="Full House Cleaning" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-16 h-16 mx-auto mb-4">
+                        <svg class="w-full h-full text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Full House Cleaning</h3>
+                    <p class="text-gray-600">Complete cleaning solution for your entire home</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">We have transparent cleaning prices</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-lg pricing-card">
+                    <h3 class="text-xl font-semibold mb-4">1 room</h3>
+                    <p class="text-4xl font-bold mb-6">$20.00</p>
+                    <ul class="mb-8 space-y-2">
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>Basic cleaning service</li>
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>2-hour service</li>
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>Cleaning supplies included</li>
+                    </ul>
+                    <button class="w-full bg-primary text-white py-2 rounded-md hover:bg-secondary">Book Now</button>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg pricing-card">
+                    <h3 class="text-xl font-semibold mb-4">2 rooms</h3>
+                    <p class="text-4xl font-bold mb-6">$40.00</p>
+                    <ul class="mb-8 space-y-2">
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>Enhanced cleaning service</li>
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>4-hour service</li>
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>Premium cleaning supplies</li>
+                    </ul>
+                    <button class="w-full bg-primary text-white py-2 rounded-md hover:bg-secondary">Book Now</button>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg pricing-card">
+                    <h3 class="text-xl font-semibold mb-4">3-4 rooms</h3>
+                    <p class="text-4xl font-bold mb-6">$60.00</p>
+                    <ul class="mb-8 space-y-2">
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>Premium cleaning service</li>
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>6-hour service</li>
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>Deep cleaning included</li>
+                    </ul>
+                    <button class="w-full bg-primary text-white py-2 rounded-md hover:bg-secondary">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">About Our Cleaning Service</h2>
+                    <p class="text-gray-600 mb-4">At Cleenit, we believe in providing the highest quality cleaning services to make your home sparkle. Our team of experienced professionals is dedicated to delivering exceptional results.</p>
+                    <p class="text-gray-600 mb-4">We use eco-friendly cleaning products and follow industry best practices to ensure your home is not just clean, but healthy too.</p>
+                    <div class="grid grid-cols-2 gap-4 mt-8">
+                        <div class="text-center">
+                            <p class="text-4xl font-bold text-primary">500+</p>
+                            <p class="text-gray-600">Happy Clients</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-4xl font-bold text-primary">1000+</p>
+                            <p class="text-gray-600">Homes Cleaned</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative h-96">
+                    <img src="images/service-1.jpg" alt="About Us" class="rounded-lg shadow-lg object-cover w-full h-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Get in Touch</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <form id="booking-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                            <input type="text" id="name" name="name" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                            <input type="email" id="email" name="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary">
+                        </div>
+                        <div>
+                            <label for="service" class="block text-sm font-medium text-gray-700">Service</label>
+                            <select id="service" name="service" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary">
+                                <option value="">Select a service</option>
+                                <option value="bedroom">Bedroom Cleaning</option>
+                                <option value="bathroom">Bathroom Cleaning</option>
+                                <option value="kitchen">Kitchen Cleaning</option>
+                                <option value="full">Full House Cleaning</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                            <textarea id="message" name="message" rows="4" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary text-white py-2 px-4 rounded-md hover:bg-secondary">Send Message</button>
+                    </form>
+                </div>
+                <div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold mb-4">Contact Information</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <svg class="w-6 h-6 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                                <div>
+                                    <p class="font-medium">Address</p>
+                                    <p class="text-gray-600">123 Cleaning Street, City, State 12345</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-6 h-6 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                                <div>
+                                    <p class="font-medium">Email</p>
+                                    <p class="text-gray-600">contact@cleenit.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-6 h-6 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                </svg>
+                                <div>
+                                    <p class="font-medium">Phone</p>
+                                    <p class="text-gray-600">(123) 456-7890</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Cleenit</h3>
+                    <p class="text-gray-400">Professional cleaning services for your home</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#services" class="text-gray-400 hover:text-white">Services</a></li>
+                        <li><a href="#pricing" class="text-gray-400 hover:text-white">Pricing</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white">About</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center">
+                <p class="text-gray-400">&copy; 2024 Cleenit. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
