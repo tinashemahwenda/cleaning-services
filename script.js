@@ -78,31 +78,31 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Form validation and submission
-const bookingForm = document.getElementById('booking-form');
-if (bookingForm) {
-    bookingForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const formData = new FormData(bookingForm);
-        const submitButton = bookingForm.querySelector('button[type="submit"]');
-        
-        // Show loading state
-        submitButton.disabled = true;
-        submitButton.innerHTML = '<span class="loader mr-2"></span>Submitting...';
-
-        // Simulate form submission (replace with actual API call)
-        setTimeout(() => {
-            submitButton.innerHTML = 'Submitted Successfully!';
-            submitButton.classList.remove('bg-primary');
-            submitButton.classList.add('bg-green-500');
-            
-            // Reset form
-            setTimeout(() => {
-                bookingForm.reset();
-                submitButton.disabled = false;
-                submitButton.innerHTML = 'Book Now';
-                submitButton.classList.remove('bg-green-500');
-                submitButton.classList.add('bg-primary');
-            }, 2000);
-        }, 1500);
-    });
-} 
+// const bookingForm = document.getElementById('booking-form');
+// if (bookingForm) {
+//     bookingForm.addEventListener('submit', (e) => {
+//         e.preventDefault();
+//         const formData = new FormData(bookingForm);
+//         const submitButton = bookingForm.querySelector('button[type="submit"]');
+//         
+//         // Show loading state
+//         submitButton.disabled = true;
+//         submitButton.innerHTML = '<span class="loader mr-2"></span>Submitting...';
+//
+//         // Simulate form submission (replace with actual API call)
+//         setTimeout(() => {
+//             submitButton.innerHTML = 'Submitted Successfully!';
+//             submitButton.classList.remove('bg-primary');
+//             submitButton.classList.add('bg-green-500');
+//             
+//             // Reset form
+//             setTimeout(() => {
+//                 bookingForm.reset();
+//                 submitButton.disabled = false;
+//                 submitButton.innerHTML = 'Book Now';
+//                 submitButton.classList.remove('bg-green-500');
+//                 submitButton.classList.add('bg-primary');
+//             }, 2000);
+//         }, 1500);
+//     });
+// } 
