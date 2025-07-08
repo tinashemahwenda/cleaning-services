@@ -77,5 +77,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Form validation and submission
-// (Removed custom handler to allow default form submission) 
+// EmailJS form submission handler removed 
